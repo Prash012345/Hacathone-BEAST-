@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASI Event</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e40dfa6587.js" crossorigin="anonymous"></script>
+    <style>
+        .logo1 {
+            width: 100%;
+            height: 100px;
+        }
+
+        .logo1 img {
+            width: 100%;
+        }
+
+        .logo2 {
+            width: 100%;
+            margin-top: 15%;
+        }
+
+        .logo2 img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo1">
+                <img src="asi-logo.png" alt="">
+            </div>
+            <div class="logo2">
+                <img src="ASI_Event_Hour.png" alt="">
+            </div>
+
+        </div>
+        <div class="right">
+            <nav class="nav-bar">
+                <ul class="nav-list">
+                    <li class="nav" style="margin-left:1% !important ;"><i
+                            class="fa-solid fa-calendar-days fa-shake fa-2xl" style="color: #ffffff; "></i></li>
+                    <li class="nav"><a href="#">Home</a></li>
+                    <li class="nav"><a href="#">About</a></li>
+                    <li class="nav"><a href="#">Services</a></li>
+                    <li class="nav"><a href="#">Contact Us</a></li>
+                    <a href="#" class="fa-solid fa-magnifying-glass fa-2xl"
+                        style=" float: right; margin: 2% 0%; margin-right: 1.5%;"></a>
+                    <input type="text" class="nav-search" placeholder="Search Event">
+                </ul>
+            </nav>
+            <div class="event-box">
+
+                <div class="event">
+                    <h1><u><i>Event Name</i></u></h1>
+                    <div class="slider">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="img_woods_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="img_5terre_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="img_mountains_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="img_lights_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="img_nature_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="img_snow_wide.jpg" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo cursor" src="img_woods.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="The Woods">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_5terre.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="Cinque Terre">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_mountains.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="Mountains and fjords">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_lights.jpg" style="width:100%"
+                                    onclick="currentSlide(4)" alt="Northern Lights">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_nature.jpg" style="width:100%"
+                                    onclick="currentSlide(5)" alt="Nature and sunrise">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)"
+                                    alt="Snowy Mountains">
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          let i;
+                          let slides = document.getElementsByClassName("mySlides");
+                          let dots = document.getElementsByClassName("demo");
+                          let captionText = document.getElementById("caption");
+                          if (n > slides.length) {slideIndex = 1}
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";
+                          dots[slideIndex-1].className += " active";
+                          captionText.innerHTML = dots[slideIndex-1].alt;
+                        }
+                        </script>
+                    <div class="about">
+                        <h3 class="speakerName">
+                            Speaker Name:
+                        </h3>
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem error. Quam
+                            porro, saepe sit optio minus non culpa atque nam, magni officia error ea! Repudiandae ipsam
+                            harum molestias consequuntur vitae cum voluptate, repellendus quia accusamus dolorem
+                            praesentium at libero, illo itaque! Numquam nihil consectetur asperiores aperiam,
+                            exercitationem ad commodi necessitatibus. Perspiciatis vel tempore commodi quam omnis amet
+                            reprehenderit, neque voluptatem, voluptatum, impedit quas! Eum culpa ducimus voluptatum, ex
+                            eligendi reiciendis. Quod dolorum perferendis voluptate fuga deserunt? Officia odit, ratione
+                            dolorem sunt optio possimus ad culpa numquam odio repellendus, amet voluptatibus eligendi
+                            aut consectetur deleniti quae cumque magnam. Commodi, odit!</span>
+                    </div>
+                    <div class="button">
+                        <input type="text" placeholder="Please Provide Feedback!!">
+                        <i class="fa-solid fa-heart fa-2xl" style="color: #e61414;"></i>
+                        <i class="fa-solid fa-heart-crack fa-2xl"></i>
+                        <i class="fa-solid fa-square-share-nodes fa-2xl" style="color: #01040a;"></i>
+                    </div>
+                </div>
+                <div class="event">
+                    <h1><u><i>Event Name</i></u></h1>
+                    <div class="slider">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="img_woods_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="img_5terre_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="img_mountains_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="img_lights_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="img_nature_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="img_snow_wide.jpg" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo cursor" src="img_woods.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="The Woods">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_5terre.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="Cinque Terre">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_mountains.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="Mountains and fjords">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_lights.jpg" style="width:100%"
+                                    onclick="currentSlide(4)" alt="Northern Lights">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_nature.jpg" style="width:100%"
+                                    onclick="currentSlide(5)" alt="Nature and sunrise">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)"
+                                    alt="Snowy Mountains">
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        let slideIndex1 = 1;
+                        showSlides(slideIndex1);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex1 += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex1 = n);
+                        }
+                        
+                        function showSlides(n) {
+                          let i;
+                          let slides = document.getElementsByClassName("mySlides");
+                          let dots = document.getElementsByClassName("demo");
+                          let captionText = document.getElementById("caption");
+                          if (n > slides.length) {slideIndex1 = 1}
+                          if (n < 1) {slideIndex1 = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex1-1].style.display = "block";
+                          dots[slideIndex1-1].className += " active";
+                          captionText.innerHTML = dots[slideIndex1-1].alt;
+                        }
+                        </script>
+                    <div class="about">
+                        <h3 class="speakerName">
+                            Speaker Name:
+                        </h3>
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem error. Quam
+                            porro, saepe sit optio minus non culpa atque nam, magni officia error ea! Repudiandae ipsam
+                            harum molestias consequuntur vitae cum voluptate, repellendus quia accusamus dolorem
+                            praesentium at libero, illo itaque! Numquam nihil consectetur asperiores aperiam,
+                            exercitationem ad commodi necessitatibus. Perspiciatis vel tempore commodi quam omnis amet
+                            reprehenderit, neque voluptatem, voluptatum, impedit quas! Eum culpa ducimus voluptatum, ex
+                            eligendi reiciendis. Quod dolorum perferendis voluptate fuga deserunt? Officia odit, ratione
+                            dolorem sunt optio possimus ad culpa numquam odio repellendus, amet voluptatibus eligendi
+                            aut consectetur deleniti quae cumque magnam. Commodi, odit!</span>
+                    </div>
+                    <div class="button">
+                        <input type="text" placeholder="Please Provide Feedback!!">
+                        <i class="fa-solid fa-heart fa-2xl" style="color: #e61414;"></i>
+                        <i class="fa-solid fa-heart-crack fa-2xl"></i>
+                        <i class="fa-solid fa-square-share-nodes fa-2xl" style="color: #01040a;"></i>
+                    </div>
+                </div>
+                <div class="event">
+                    <h1><u><i>Event Name</i></u></h1>
+                    <div class="slider">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="img_woods_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="img_5terre_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="img_mountains_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="img_lights_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="img_nature_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="img_snow_wide.jpg" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo cursor" src="img_woods.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="The Woods">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_5terre.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="Cinque Terre">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_mountains.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="Mountains and fjords">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_lights.jpg" style="width:100%"
+                                    onclick="currentSlide(4)" alt="Northern Lights">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_nature.jpg" style="width:100%"
+                                    onclick="currentSlide(5)" alt="Nature and sunrise">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)"
+                                    alt="Snowy Mountains">
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          let i;
+                          let slides = document.getElementsByClassName("mySlides");
+                          let dots = document.getElementsByClassName("demo");
+                          let captionText = document.getElementById("caption");
+                          if (n > slides.length) {slideIndex = 1}
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";
+                          dots[slideIndex-1].className += " active";
+                          captionText.innerHTML = dots[slideIndex-1].alt;
+                        }
+                        </script>
+                    <div class="about">
+                        <h3 class="speakerName">
+                            Speaker Name:
+                        </h3>
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem error. Quam
+                            porro, saepe sit optio minus non culpa atque nam, magni officia error ea! Repudiandae ipsam
+                            harum molestias consequuntur vitae cum voluptate, repellendus quia accusamus dolorem
+                            praesentium at libero, illo itaque! Numquam nihil consectetur asperiores aperiam,
+                            exercitationem ad commodi necessitatibus. Perspiciatis vel tempore commodi quam omnis amet
+                            reprehenderit, neque voluptatem, voluptatum, impedit quas! Eum culpa ducimus voluptatum, ex
+                            eligendi reiciendis. Quod dolorum perferendis voluptate fuga deserunt? Officia odit, ratione
+                            dolorem sunt optio possimus ad culpa numquam odio repellendus, amet voluptatibus eligendi
+                            aut consectetur deleniti quae cumque magnam. Commodi, odit!</span>
+                    </div>
+                    <div class="button">
+                        <input type="text" placeholder="Please Provide Feedback!!">
+                        <i class="fa-solid fa-heart fa-2xl" style="color: #e61414;"></i>
+                        <i class="fa-solid fa-heart-crack fa-2xl"></i>
+                        <i class="fa-solid fa-square-share-nodes fa-2xl" style="color: #01040a;"></i>
+                    </div>
+                </div>
+                <div class="event">
+                    <h1><u><i>Event Name</i></u></h1>
+                    <div class="slider">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="img_woods_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="img_5terre_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="img_mountains_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="img_lights_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="img_nature_wide.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="img_snow_wide.jpg" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo cursor" src="img_woods.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="The Woods">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_5terre.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="Cinque Terre">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_mountains.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="Mountains and fjords">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_lights.jpg" style="width:100%"
+                                    onclick="currentSlide(4)" alt="Northern Lights">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_nature.jpg" style="width:100%"
+                                    onclick="currentSlide(5)" alt="Nature and sunrise">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)"
+                                    alt="Snowy Mountains">
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          let i;
+                          let slides = document.getElementsByClassName("mySlides");
+                          let dots = document.getElementsByClassName("demo");
+                          let captionText = document.getElementById("caption");
+                          if (n > slides.length) {slideIndex = 1}
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";
+                          dots[slideIndex-1].className += " active";
+                          captionText.innerHTML = dots[slideIndex-1].alt;
+                        }
+                        </script>
+                    <div class="about">
+                        <h3 class="speakerName">
+                            Speaker Name:
+                        </h3>
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, quidem error. Quam
+                            porro, saepe sit optio minus non culpa atque nam, magni officia error ea! Repudiandae ipsam
+                            harum molestias consequuntur vitae cum voluptate, repellendus quia accusamus dolorem
+                            praesentium at libero, illo itaque! Numquam nihil consectetur asperiores aperiam,
+                            exercitationem ad commodi necessitatibus. Perspiciatis vel tempore commodi quam omnis amet
+                            reprehenderit, neque voluptatem, voluptatum, impedit quas! Eum culpa ducimus voluptatum, ex
+                            eligendi reiciendis. Quod dolorum perferendis voluptate fuga deserunt? Officia odit, ratione
+                            dolorem sunt optio possimus ad culpa numquam odio repellendus, amet voluptatibus eligendi
+                            aut consectetur deleniti quae cumque magnam. Commodi, odit!</span>
+                    </div>
+                    <div class="button">
+                        <input type="text" placeholder="Please Provide Feedback!!">
+                        <i class="fa-solid fa-heart fa-2xl" style="color: #e61414;"></i>
+                        <i class="fa-solid fa-heart-crack fa-2xl"></i>
+                        <i class="fa-solid fa-square-share-nodes fa-2xl" style="color: #01040a;"></i>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
